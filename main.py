@@ -82,8 +82,7 @@ class Book(Resource):
             result.title = args['title']
         if args['author']:
             result.author = args['author']
-        if args['read']:
-            result.read = args['read']
+        result.read = args['read']
         
         db.session.commit()
         return result
